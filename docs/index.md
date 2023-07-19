@@ -51,5 +51,5 @@ TiPS provides an extra security feature where the executing user of the stored p
 * [PROCESS_CMD_TGT_DQ_TEST](reference.md#process_cmd_tgt_dq_test) - This table is configured with Linking DQ Tests to the Target (table).
 * [PROCESS_DQ_LOG](reference.md#process_dq_log) - This table is populated with data quality test execution logs when data pipelines are run through TiPS. Data in this table is tied up to `PROCESS_LOG` table through  `process_log_id` column.
 
-###Licencing
+### Licencing
 TiPS (Native App) is licenced under GNU (GPL) and you are free to install it from Snowflake Marketplace and use it as you may wish.<p>Any feedbacks and suggestions for improvements are always welcome. Kindly add your feedbacks/suggestions using [GitHub Discussions](https://github.com/orgs/ProjectiveGroupUK/discussions) 
