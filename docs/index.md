@@ -38,6 +38,7 @@ TiPS is a simple to use Metadata driven transformation framework. All the metada
 
 All TiPS objects are first class database objects.
 
+#### TiPS Security Aspect:
 TiPS provides an extra security feature where the executing user of the stored procedure doesn't need to have direct read/write privileges on the underlying table/data. User calling the stored procedure only needs privileges to execute the stored procedure.
 
 ### TiPS Metadata Tables:

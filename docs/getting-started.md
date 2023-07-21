@@ -20,7 +20,7 @@ TiPS is installed with a sample data pipeline named TIPS_TEST_PIPELINE. This sch
 ## Grant Application Role
 TiPS App is installed with 2 application roles:
 
-- TIPS_ADMIN_ROLE - This is the role, which can read/write all TiPS metadata objects. It acts like an application owner role. Assign this role to other account/database roles and/or users who need read/write privileges to TiPS metadata information. <br>E.g., to grant this role to SYSADMIN:
+- TIPS_ADMIN_ROLE - This is the role, which can read/write all TiPS metadata objects. It acts like an application owner role. Assign this role to other account/database roles and/or users who need read/write privileges to TiPS metadata information <br>E.g., to grant this role to SYSADMIN:
 
 ```
 USE ROLE <account role>;
@@ -30,18 +30,46 @@ GRANT APPLICATION ROLE tips_admin_role to ROLE SYSADMIN
 
 *`<account role>` -> Account role used while installing TiPS App*<br>*`<application name>` -> Application name used while installing TiPS App. By default (if not changed) it is TiPS*
 
-- TIPS_USER_ROLE - This role has least privileges. It can only read data from TiPS metadata tables and can execute data pipelines through TiPS stored procedure. Grant this application role to account/database roles and/or user who can only execute TiPS, without needing to have read/write privileges to any other underlying database objects. This role brings in additional security feature with TiPS. This application role can be granted in a similar way as shown above.    
+An example snippet from Snowsight:
+![Process Cmd Table Example](images/getting_started_grant_tips_admin_role.png)
+
+- TIPS_USER_ROLE - This role has least privileges. It can only read data from TiPS metadata tables and can execute data pipelines through TiPS stored procedure. Grant this application role to account/database roles and/or user who can only execute TiPS, without needing to have read/write privileges to any other underlying database objects. This role brings in additional security feature with TiPS [as described here](index.md#tips-security-aspect). <br>E.g., to grant this role to least privileged account role:
+
+```
+USE ROLE <account role>;
+USE APPLICATION <application name>;
+GRANT APPLICATION ROLE tips_user_role to ROLE <another account role>
+```
+
+*`<account role>` -> Account role used while installing TiPS App*<br>*`<application name>` -> Application name used while installing TiPS App. By default (if not changed) it is TiPS*<br>*`<another account role>` -> This is the role which can only execute TiPS without needing any privileges to underlying tables of data pipelines*
+
+An example snippet from Snowsight:
+![Process Cmd Table Example](images/getting_started_grant_tips_user_role.png)    
 
 ## Executing Sample Data Pipeline
 Now that you have got application installed and grants sorted, you are ready to execute sample data pipeline and see TiPS in action. Run the following statements to execute TiPS:
 
 ```
 USE ROLE <account or database role>;
-call <application name>.tips_md_schema.run_process('TIPS_TEST_PIPELINE','{"COBID":"20230410","MARKET_SEGMENT":"FURNITURE"}','Y', CURRENT_DATABASE());;
+USE APPLICATION <application name>;
+USE SCHEMA tips_md_schema;
+call run_process('TIPS_TEST_PIPELINE','{"COBID":"20230410","MARKET_SEGMENT":"FURNITURE"}','Y', <application name>);;
 ```
 *`<account or database role>` -> This is the role that either of the application role has been granted in [above step](#grant-application-role)*<br>*`<application name>` -> Application name used while installed TiPS App. By default (if not changed) it is TiPS*
 
-Once execution of sample data pipeline is completed, execution log in JSON format is shown as return value. All execution logs are also stored in `<application name>`.tips_md_schema.process_log table, which can be used to query execution logs for previous runs. Also `<application name>`.tips_md_schema.vw_process_log can be used for querying execution logs. This view flattens out the json format log information into easily readable tabular format.
+An example snippet from Snowsight:
+![Process Cmd Table Example](images/getting_started_execute_sample_pipeline.png)    
+
+## Checking execution logs
+Once execution of sample data pipeline is completed, execution log in JSON format is shown as return value. Execution logs are also stored in `<application name>`.tips_md_schema.process_log table, which can be used to query execution logs for previous runs. 
+
+An example snippet from Snowsight:
+![Process Cmd Table Example](images/getting_started_view_process_log.png)    
+
+There is also a view `<application name>`.tips_md_schema.vw_process_log available, which can be used to query the execution log in a tabular format. This view flattens out the JSON format log information into easily readable tabular format. This can be helpul in identifying individual SQLs ran within the pipeline and it also includes information like elapsed time to execute individual SQL statements along with number of rows affected.
+
+An example snippet from Snowsight:
+![Process Cmd Table Example](images/getting_started_view_vw_process_log.png)    
 
 ## Setting up and executing your own Data Pipeline
 If you have found using TiPS intresting so far and now want to use it in a more realistic way with your own dataset, please follow the steps below:
