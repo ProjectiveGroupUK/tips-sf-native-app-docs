@@ -25,10 +25,10 @@ TiPS App is installed with 2 application roles:
 ```
 USE ROLE <account role>;
 USE APPLICATION <application name>;
-GRANT APPLICATION ROLE tips_admin_role to ROLE SYSADMIN
+GRANT APPLICATION ROLE tips_admin_role to ROLE <another account role>;
 ```
 
-*`<account role>` -> Account role used while installing TiPS App*<br>*`<application name>` -> Application name used while installing TiPS App. By default (if not changed) it is TiPS*
+*`<account role>` -> Account role used while installing TiPS App*<br>*`<application name>` -> Application name used while installing TiPS App. By default (if not changed) it is TiPS*<br>*`<another account role>` -> This is the role which would have read/write/execution privileges to TiPS metadata tables and stored procedure*
 
 An example snippet from Snowsight:
 ![Process Cmd Table Example](images/getting_started_grant_tips_admin_role.png)
@@ -38,7 +38,7 @@ An example snippet from Snowsight:
 ```
 USE ROLE <account role>;
 USE APPLICATION <application name>;
-GRANT APPLICATION ROLE tips_user_role to ROLE <another account role>
+GRANT APPLICATION ROLE tips_user_role to ROLE <another account role>;
 ```
 
 *`<account role>` -> Account role used while installing TiPS App*<br>*`<application name>` -> Application name used while installing TiPS App. By default (if not changed) it is TiPS*<br>*`<another account role>` -> This is the role which can only execute TiPS without needing any privileges to underlying tables of data pipelines*
@@ -53,7 +53,7 @@ Now that you have got application installed and grants sorted, you are ready to 
 USE ROLE <account or database role>;
 USE APPLICATION <application name>;
 USE SCHEMA tips_md_schema;
-call run_process('TIPS_TEST_PIPELINE','{"COBID":"20230410","MARKET_SEGMENT":"FURNITURE"}','Y', <application name>);;
+call run_process('TIPS_TEST_PIPELINE','{"COBID":"20230410","MARKET_SEGMENT":"FURNITURE"}','Y', '<application name>');
 ```
 *`<account or database role>` -> This is the role that either of the application role has been granted in [above step](#grant-application-role)*<br>*`<application name>` -> Application name used while installed TiPS App. By default (if not changed) it is TiPS*
 
