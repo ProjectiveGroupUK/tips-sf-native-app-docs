@@ -108,7 +108,7 @@ GRANT SELECT, INSERT, UPDATE, DELETE, TRUNCATE ON TABLE <database name>.<schema 
 Now that metadata for data pipeline has been set and necessary privileges have been granted in above steps, you can execute TiPS using RUN_PROCESS stored procedure. <br>E.g.
 ```
 USE ROLE <account or database role>;
-call <application name>.tips_md_schema.run_process('MY_DATA_PIPELINE','{"KEY1":"VALUE1","KEY2":"VALUE2"}','Y', '<database name>');;
+call <application name>.tips_md_schema.run_process('MY_DATA_PIPELINE','{"KEY1":"VALUE1","KEY2":"VALUE2"}','Y', '<database name>');
 ```
 *`<account or database role>` -> This is the role that either of the application role has been granted (as described above)*<br>*`<application name>` -> Application name used while installed TiPS App. By default (if not changed) it is TiPS*<br>*`<database name>` -> This is the database where objects of the data pipeline reside.*
 
