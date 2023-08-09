@@ -62,11 +62,26 @@ An example snippet from Snowsight:
 
 ## Checking execution logs
 Once execution of sample data pipeline is completed, execution log in JSON format is shown as return value. Execution logs are also stored in `<application name>`.tips_md_schema.process_log table, which can be used to query execution logs for previous runs. 
+Run the following statement to query execution log from `<application name>`.tips_md_schema.process_log table:
+
+```
+USE APPLICATION <application name>;
+USE SCHEMA tips_md_schema;
+SELECT * FROM process_log ORDER BY process_log_id DESC;
+```
+*`<application name>` -> Application name used while installed TiPS App. By default (if not changed) it is TiPS*
 
 An example snippet from Snowsight:
 ![Process Cmd Table Example](images/getting_started_view_process_log.png)    
 
-There is also a view `<application name>`.tips_md_schema.vw_process_log available, which can be used to query the execution log in a tabular format. This view flattens out the JSON format log information into easily readable tabular format. This can be helpul in identifying individual SQLs ran within the pipeline and it also includes information like elapsed time to execute individual SQL statements along with number of rows affected.
+There is also a view `<application name>`.tips_md_schema.vw_process_log available, which can be used to query the execution log in a tabular format. This view flattens out the JSON format log information into easily readable tabular format. This can be helpul in identifying individual SQLs ran within the pipeline and it also includes information like elapsed time to execute individual SQL statements along with number of rows affected. Run the following statement to query execution log from `<application name>`.tips_md_schema.vw_process_log view:
+
+```
+USE APPLICATION <application name>;
+USE SCHEMA tips_md_schema;
+SELECT * FROM vw_process_log WHERE process_log_id = <process log id> ORDER BY process_cmd_id, cmd_sequence;
+```
+*`<application name>` -> Application name used while installed TiPS App. By default (if not changed) it is TiPS*<br>*`<process log id>` -> Use process_log_id from process_log table. This filter is not mandatory, but good to have*
 
 An example snippet from Snowsight:
 ![Process Cmd Table Example](images/getting_started_view_vw_process_log.png)    
