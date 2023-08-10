@@ -6,6 +6,17 @@ Great, now that you have made your mind to give TiPS a try, let's get you starte
 
 Sign-in to your snowflake account from Snowsight. Go Search for TiPS on <a href="https://app.snowflake.com/marketplace" target="_blank">Snowflake Marketplace</a>. From the search results, click on the icon for TiPS. This would open a new page with listing details about TiPS. Click on "Get" button. This should install TiPS on your snowflake account. Once the app is installed, you should receive a confirmation email about successful installation.
 
+<span style="color:red">
+<b><u>Please Note:</b></u>
+</span>
+When you install the app from Snowflake Market Place, <i>"Application Name"</i> is populated as as <b>"TiPS__Data_Transformation_Framework"</b> by default. It is advisable to change the <i>"Application Name"</i> to a shorter name E.g. "TiPS". App name is used in SQLs at quite a few places in the steps below, so having a shorted name would help.
+
+Screenshot of how it appears by default:
+![App Name (Default)](images/installation_1.png)   
+
+Example screenshot with App Name changed to TiPS:
+![App Name (Changed)](images/installation_2.png)   
+
 ## Installation Overview
 Once you have received confirmation email from Snowflake that TiPS has successfully been installed in your account, you should see it listed in "Apps" section on Snowsight. Navigate to "Data" section and click on Databases. Within the list of databases, you should also see TiPS (with the name that you provided when installing the app), just like any other database. On expanding the app, you would see 4 schemas (as below):
 ### INFORMATION_SCHEMA
