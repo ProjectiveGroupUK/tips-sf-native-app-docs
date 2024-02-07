@@ -54,3 +54,10 @@ TiPS provides an extra security feature where the executing user of the stored p
 
 ### Licencing
 TiPS (Native App) is licenced under GNU (GPL) and you are free to install it from Snowflake Marketplace and use it as you may wish.<p>Any feedbacks and suggestions for improvements are always welcome. Kindly add your feedbacks/suggestions using [GitHub Discussions](https://github.com/orgs/ProjectiveGroupUK/discussions) 
+
+### Contact US
+If you feel the need to contact us, you can reach us through the channels below:
+
+* [Projective Group Website](https://www.projectivegroup.com/)
+* [Projective Group Sales Email](mailto://steve.jenkings@projectivegroup.com)
+* [Projective Group Support Email](mailto://nitin.garg@projectivegroup.com)
