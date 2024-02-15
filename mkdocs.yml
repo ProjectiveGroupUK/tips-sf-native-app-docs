@@ -28,9 +28,11 @@ nav:
   - Getting Started: getting-started.md
   - TiPS Conventions: tips_conventions.md
   - Reference Guide: reference.md
-  - Demo Video TiPS V1: demo_video_tips_v1.md
+  - Demo Videos: demo_video_tips_v1.md
 
 plugins:
-    - mkdocs-video  
+    - mkdocs-video:
+        is_video: True
+        video_autoplay: False  
 
 copyright: Copyright &copy; 2023 ProjectiveGroup UK
