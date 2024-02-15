@@ -1,0 +1,772 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../tips_conventions/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.9">
+    
+    
+      
+        <title>Getting Started - TiPS (Snowflake Native App) Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.f2e4d321.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#getting-started" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="TiPS (Snowflake Native App) Documentation" class="md-header__button md-logo" aria-label="TiPS (Snowflake Native App) Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            TiPS (Snowflake Native App) Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Getting Started
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="TiPS (Snowflake Native App) Documentation" class="md-nav__button md-logo" aria-label="TiPS (Snowflake Native App) Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    TiPS (Snowflake Native App) Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#install-tips-app-from-snowflake-marketplace" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install TiPS App from Snowflake Marketplace
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation Overview
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#information_schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      INFORMATION_SCHEMA
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tips_md_schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      TIPS_MD_SCHEMA
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dimension" class="md-nav__link">
+    <span class="md-ellipsis">
+      DIMENSION
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transform" class="md-nav__link">
+    <span class="md-ellipsis">
+      TRANSFORM
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#grant-application-role" class="md-nav__link">
+    <span class="md-ellipsis">
+      Grant Application Role
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#executing-sample-data-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      Executing Sample Data Pipeline
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checking-execution-logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Checking execution logs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setting-up-and-executing-your-own-data-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setting up and executing your own Data Pipeline
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Setting up and executing your own Data Pipeline">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#add-metadata-about-your-data-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      Add metadata about your data pipeline
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#grant-appropriate-privileges-to-application" class="md-nav__link">
+    <span class="md-ellipsis">
+      Grant appropriate privileges to Application
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#execute-data-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      Execute Data Pipeline
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tips_conventions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TiPS Conventions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Reference Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../demo_video_tips_v1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Demo Videos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#install-tips-app-from-snowflake-marketplace" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install TiPS App from Snowflake Marketplace
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation Overview
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#information_schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      INFORMATION_SCHEMA
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tips_md_schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      TIPS_MD_SCHEMA
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dimension" class="md-nav__link">
+    <span class="md-ellipsis">
+      DIMENSION
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transform" class="md-nav__link">
+    <span class="md-ellipsis">
+      TRANSFORM
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#grant-application-role" class="md-nav__link">
+    <span class="md-ellipsis">
+      Grant Application Role
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#executing-sample-data-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      Executing Sample Data Pipeline
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checking-execution-logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Checking execution logs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setting-up-and-executing-your-own-data-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setting up and executing your own Data Pipeline
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Setting up and executing your own Data Pipeline">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#add-metadata-about-your-data-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      Add metadata about your data pipeline
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#grant-appropriate-privileges-to-application" class="md-nav__link">
+    <span class="md-ellipsis">
+      Grant appropriate privileges to Application
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#execute-data-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      Execute Data Pipeline
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<div><h1 id="getting-started">Getting Started</h1>
+<p>Great, now that you have made your mind to give TiPS a try, let's get you started. We are confident that you will find it worth to give it a try. </p>
+<h2 id="install-tips-app-from-snowflake-marketplace">Install TiPS App from Snowflake Marketplace</h2>
+<p><em>if you have already installed the app, you can skip this section and head over to the <a href="#installation-overview">next section</a></em></p>
+<p>Sign-in to your snowflake account from Snowsight. Go Search for TiPS on <a href="https://app.snowflake.com/marketplace" target="_blank">Snowflake Marketplace</a>. From the search results, click on the icon for TiPS. This would open a new page with listing details about TiPS. Click on "Get" button. This should install TiPS on your snowflake account. Once the app is installed, you should receive a confirmation email about successful installation.</p>
+<p><span style="color:red">
+<b><u>Please Note:</u></b>
+</span>
+When you install the app from Snowflake Market Place, <i>"Application Name"</i> is populated as as <b>"TiPS__Data_Transformation_Framework"</b> by default. It is advisable to change the <i>"Application Name"</i> to a shorter name E.g. "TiPS". App name is used in SQLs at quite a few places in the steps below, so having a shorted name would help.</p>
+<p>Screenshot of how it appears by default:
+<img alt="App Name (Default)" src="../images/installation_1.png">   </p>
+<p>Example screenshot with App Name changed to TiPS:
+<img alt="App Name (Changed)" src="../images/installation_2.png">   </p>
+<h2 id="installation-overview">Installation Overview</h2>
+<p>Once you have received confirmation email from Snowflake that TiPS has successfully been installed in your account, you should see it listed in "Apps" section on Snowsight. Navigate to "Data" section and click on Databases. Within the list of databases, you should also see TiPS (with the name that you provided when installing the app), just like any other database. On expanding the app, you would see 4 schemas (as below):</p>
+<h3 id="information_schema">INFORMATION_SCHEMA</h3>
+<p>This is the standard schema that snowflake creates inside every database.</p>
+<h3 id="tips_md_schema">TIPS_MD_SCHEMA</h3>
+<p>This is the schema where all metadata objects used by TiPS reside. Details about these metadata tables are available in <a href="../#tips-metadata-tables">Introduction Page</a> and <a href="../reference/">Reference Page</a></p>
+<h3 id="dimension">DIMENSION</h3>
+<p>TiPS is installed with a sample data pipeline named TIPS_TEST_PIPELINE. This schema contains objects related to the sample data pipeline. This schema represents presentation layer where objects exposed to end user and downstream systems reside.</p>
+<h3 id="transform">TRANSFORM</h3>
+<p>TiPS is installed with a sample data pipeline named TIPS_TEST_PIPELINE. This schema contains objects related to the sample data pipeline. This schema represents transformation layer where objects that form part of transformation logic in data pipelines reside.</p>
+<h2 id="grant-application-role">Grant Application Role</h2>
+<p>TiPS App is installed with 2 application roles:</p>
+<ul>
+<li>TIPS_ADMIN_ROLE - This is the role, which can read/write all TiPS metadata objects. It acts like an application owner role. Assign this role to other account/database roles and/or users who need read/write privileges to TiPS metadata information <br>E.g., to grant this role to SYSADMIN:</li>
+</ul>
+<pre><code>USE ROLE &lt;account role&gt;;
+USE APPLICATION &lt;application name&gt;;
+GRANT APPLICATION ROLE tips_admin_role to ROLE &lt;another account role&gt;;
+</code></pre>
+<p><em><code>&lt;account role&gt;</code> -&gt; Account role used while installing TiPS App</em><br><em><code>&lt;application name&gt;</code> -&gt; Application name used while installing TiPS App. By default (if not changed) it is TiPS</em><br><em><code>&lt;another account role&gt;</code> -&gt; This is the role which would have read/write/execution privileges to TiPS metadata tables and stored procedure</em></p>
+<p>An example snippet from Snowsight:
+<img alt="Process Cmd Table Example" src="../images/getting_started_grant_tips_admin_role.png"></p>
+<ul>
+<li>TIPS_USER_ROLE - This role has least privileges. It can only read data from TiPS metadata tables and can execute data pipelines through TiPS stored procedure. Grant this application role to account/database roles and/or user who can only execute TiPS, without needing to have read/write privileges to any other underlying database objects. This role brings in additional security feature with TiPS <a href="../#tips-security-aspect">as described here</a>. <br>E.g., to grant this role to least privileged account role:</li>
+</ul>
+<pre><code>USE ROLE &lt;account role&gt;;
+USE APPLICATION &lt;application name&gt;;
+GRANT APPLICATION ROLE tips_user_role to ROLE &lt;another account role&gt;;
+</code></pre>
+<p><em><code>&lt;account role&gt;</code> -&gt; Account role used while installing TiPS App</em><br><em><code>&lt;application name&gt;</code> -&gt; Application name used while installing TiPS App. By default (if not changed) it is TiPS</em><br><em><code>&lt;another account role&gt;</code> -&gt; This is the role which can only execute TiPS without needing any privileges to underlying tables of data pipelines</em></p>
+<p>An example snippet from Snowsight:
+<img alt="Process Cmd Table Example" src="../images/getting_started_grant_tips_user_role.png">    </p>
+<h2 id="executing-sample-data-pipeline">Executing Sample Data Pipeline</h2>
+<p>Now that you have got application installed and grants sorted, you are ready to execute sample data pipeline and see TiPS in action. Run the following statements to execute TiPS:</p>
+<pre><code>USE ROLE &lt;account or database role&gt;;
+USE APPLICATION &lt;application name&gt;;
+USE SCHEMA tips_md_schema;
+call run_process('TIPS_TEST_PIPELINE','{"COBID":"20230410","MARKET_SEGMENT":"FURNITURE"}','Y', '&lt;application name&gt;');
+</code></pre>
+<p><em><code>&lt;account or database role&gt;</code> -&gt; This is the role that either of the application role has been granted in <a href="#grant-application-role">above step</a></em><br><em><code>&lt;application name&gt;</code> -&gt; Application name used while installed TiPS App. By default (if not changed) it is TiPS</em></p>
+<p>An example snippet from Snowsight:
+<img alt="Process Cmd Table Example" src="../images/getting_started_execute_sample_pipeline.png">    </p>
+<h2 id="checking-execution-logs">Checking execution logs</h2>
+<p>Once execution of sample data pipeline is completed, execution log in JSON format is shown as return value. Execution logs are also stored in <code>&lt;application name&gt;</code>.tips_md_schema.process_log table, which can be used to query execution logs for previous runs. 
+Run the following statement to query execution log from <code>&lt;application name&gt;</code>.tips_md_schema.process_log table:</p>
+<pre><code>USE APPLICATION &lt;application name&gt;;
+USE SCHEMA tips_md_schema;
+SELECT * FROM process_log ORDER BY process_log_id DESC;
+</code></pre>
+<p><em><code>&lt;application name&gt;</code> -&gt; Application name used while installed TiPS App. By default (if not changed) it is TiPS</em></p>
+<p>An example snippet from Snowsight:
+<img alt="Process Cmd Table Example" src="../images/getting_started_view_process_log.png">    </p>
+<p>There is also a view <code>&lt;application name&gt;</code>.tips_md_schema.vw_process_log available, which can be used to query the execution log in a tabular format. This view flattens out the JSON format log information into easily readable tabular format. This can be helpul in identifying individual SQLs ran within the pipeline and it also includes information like elapsed time to execute individual SQL statements along with number of rows affected. Run the following statement to query execution log from <code>&lt;application name&gt;</code>.tips_md_schema.vw_process_log view:</p>
+<pre><code>USE APPLICATION &lt;application name&gt;;
+USE SCHEMA tips_md_schema;
+SELECT * FROM vw_process_log WHERE process_log_id = &lt;process log id&gt; ORDER BY process_cmd_id, cmd_sequence;
+</code></pre>
+<p><em><code>&lt;application name&gt;</code> -&gt; Application name used while installed TiPS App. By default (if not changed) it is TiPS</em><br><em><code>&lt;process log id&gt;</code> -&gt; Use process_log_id from process_log table. This filter is not mandatory, but good to have</em></p>
+<p>An example snippet from Snowsight:
+<img alt="Process Cmd Table Example" src="../images/getting_started_view_vw_process_log.png">    </p>
+<h2 id="setting-up-and-executing-your-own-data-pipeline">Setting up and executing your own Data Pipeline</h2>
+<p>If you have found using TiPS intresting so far and now want to use it in a more realistic way with your own dataset, please follow the steps below:</p>
+<h3 id="add-metadata-about-your-data-pipeline">Add metadata about your data pipeline</h3>
+<p>This step has to be done with the role that has been granted application role TIPS_ADMIN_ROLE, as you would be inserting records in PROCESS and PROCESS_CMD tables in <code>&lt;application name&gt;</code>.tips_md_schema schema.</p>
+<ul>
+<li>Add a record in PROCESS table - This table holds information about data pipeline. An example insert SQL would look something like:</li>
+</ul>
+<pre><code>INSERT INTO &lt;application_name&gt;.tips_md_schema.process (process_name, process_description)
+VALUES ('MY_DATA_PIPELINE','This is a descrption about my data pipeline');
+</code></pre>
+<p><em>- change column values as appropriate</em><br><em>- PROCESS_ID doesn't need to be included here. It would get auto populated.</em></p>
+<ul>
+<li>Add record(s) into PROCESS_CMD table - This table holds information about individual steps within a data pipeline. An example insert sql would look something like:</li>
+</ul>
+<pre><code>SET process_id = (SELECT process_id FROM process WHERE process_name = 'MY_DATA_PIPELINE');
+
+INSERT INTO process_cmd (process_id, process_cmd_id, cmd_type, cmd_src, cmd_tgt, refresh_type)  
+VALUES ($process_id, 10, 'REFRESH', 'SCHEMA1.VIEW_1', 'SCHEMA1.TABLE_1', 'TI'),
+VALUES ($process_id, 20, 'APPEND', 'SCHEMA1.VIEW_2', 'SCHEMA2.TABLE_2', NULL);
+</code></pre>
+<p><em>- change column values as appropriate</em><br><em>- add other columns and values as appropriate to the other command types supported. Details about all supported command types are available on <a href="../reference/#command-types">reference guide page</a>.</em><br><em>- PROCESS_CMD_ID is user defined. This dictates the order in which steps of pipeline are executed. Having wider gaps between process_id makes it easier in future to add steps in between without needing to reshuffle existing process_cmd_id.</em></p>
+<h3 id="grant-appropriate-privileges-to-application">Grant appropriate privileges to Application</h3>
+<p>When the application is executed, it generates DML statements at run time for individual steps in a data pipeline and executes it. TiPS uses fully qualified object names for these DML operations. Database name is passed as one of the arguments when executing the application. Schema names and object names are part of metadata. To execute these generated DML statements, application needs to be granted privileges as appropriate for all underlying objects of a data pipeline.<br>E.g.</p>
+<pre><code>GRANT USAGE ON DATABASE &lt;database name&gt; TO APPLICATION &lt;application name&gt;;
+GRANT USAGE ON SCHEMA &lt;database name&gt;.&lt;schema name&gt; TO APPLICATION &lt;application name&gt;;
+GRANT SELECT ON VIEW &lt;database name&gt;.&lt;schema name&gt;.&lt;view name&gt; TO APPLICATION &lt;application name&gt;;
+GRANT SELECT, INSERT, UPDATE, DELETE, TRUNCATE ON TABLE &lt;database name&gt;.&lt;schema name&gt;.&lt;table name&gt; TO APPLICATION &lt;application name&gt;;
+</code></pre>
+<p><em><code>&lt;database name&gt;</code> -&gt; This is the database where objects of the data pipeline reside.</em><br><em><code>&lt;application name&gt;</code> -&gt; Application name used while installed TiPS App. By default (if not changed) it is TiPS</em><br><em><code>&lt;schema name&gt;</code> -&gt; Schema(s) in which objects of data pipeline reside.</em><br></p>
+<h3 id="execute-data-pipeline">Execute Data Pipeline</h3>
+<p>Now that metadata for data pipeline has been set and necessary privileges have been granted in above steps, you can execute TiPS using RUN_PROCESS stored procedure. <br>E.g.</p>
+<pre><code>USE ROLE &lt;account or database role&gt;;
+call &lt;application name&gt;.tips_md_schema.run_process('MY_DATA_PIPELINE','{"KEY1":"VALUE1","KEY2":"VALUE2"}','Y', '&lt;database name&gt;');
+</code></pre>
+<p><em><code>&lt;account or database role&gt;</code> -&gt; This is the role that either of the application role has been granted (as described above)</em><br><em><code>&lt;application name&gt;</code> -&gt; Application name used while installed TiPS App. By default (if not changed) it is TiPS</em><br><em><code>&lt;database name&gt;</code> -&gt; This is the database where objects of the data pipeline reside.</em></p>
+<p>RUN_PROCESS stored procedure requires 4 argument values to be passed at execution:</p>
+<ol>
+<li>PROCESS_NAME - This is the name of the pipeline, as specified in TIPS_MD_SCHEMA.PROCESS table in PROCESS_NAME column.</li>
+<li>VARS - If bind variables have been used in pipeline definition, this is where you specify bind variables and their values to be used at the time of execution. It should be entered in JSON format string as shown above. If bind variables are not applicable, please use NULL for this argument.</li>
+<li>EXECUTE_FLAG - This accepts 'Y' or 'N'. When 'N' is used, it implies that stored procedure is being called in non-execute mode (debug), where TiPS would generate all SQLs and output in execution log but would not execute the generated SQLs in database.</li>
+<li>TARGET_DB_NAME - This is the database where objects of the data pipeline reside. At run time, TiPS would prepend this database name to source and targets defined in metadata (depending on command type). If NULL is used, TiPS would use the CURRENT DATABASE.</li>
+</ol>
+<p>All Done! You are now set to start using TiPS in its full swing. Please do checkout <a href="../tips_conventions/">TiPS Conventions</a> and <a href="../reference/">Reference Guide</a> for further useful information.</p></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2023 ProjectiveGroup UK
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "navigation.instant", "navigation.top"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.8fd75fb4.min.js"></script>
+      
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+      
+        <script src="../javascripts/tablesort.js"></script>
+      
+    
+  </body>
+</html>
