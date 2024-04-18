@@ -15,7 +15,7 @@ Details about all possible command types in TiPS are listed on [reference guide 
 
 The ideology behind TiPS was to create a framework that an experienced database professional, already adept with SQL, could easily deliver data pipelines with virtually zero learning curve.
 
-A data pipeline in TiPS is made up multiple steps that run serially, with each step performing its own operation to move data from source to target or checking data quality. Steps within a data pipeline can perform one of two things:
+A data pipeline in TiPS is made up multiple steps that can be chained together, with each step performing its own operation to move data from source to target or checking data quality. Steps within a data pipeline can perform one of two things:
 
 * A movement of data from a source to a target. In most cases the sources are database views encapsulating transformation logic in the desired form, while the targets are database tables.
 * A data quality check to make sure data being moved from source to target conforms to the desired form, before getting consumed by the data consumer and thus providing inconsistent results.
