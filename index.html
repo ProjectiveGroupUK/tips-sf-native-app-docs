@@ -1,0 +1,585 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+        <link rel="next" href="getting-started/">
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.18">
+    
+    
+      
+        <title>TiPS (Snowflake Native App) Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.66ac8b77.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#introduction-to-tips-snowflake-native-app" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="TiPS (Snowflake Native App) Documentation" class="md-header__button md-logo" aria-label="TiPS (Snowflake Native App) Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            TiPS (Snowflake Native App) Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Introduction
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="TiPS (Snowflake Native App) Documentation" class="md-nav__button md-logo" aria-label="TiPS (Snowflake Native App) Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    TiPS (Snowflake Native App) Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is TiPS?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-tips-is-not" class="md-nav__link">
+    <span class="md-ellipsis">
+      What TiPS is not?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-does-tips-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      How does TiPS work?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How does TiPS work?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tips-security-aspect" class="md-nav__link">
+    <span class="md-ellipsis">
+      TiPS Security Aspect:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tips-metadata-tables" class="md-nav__link">
+    <span class="md-ellipsis">
+      TiPS Metadata Tables:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#licensing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Licensing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contact-us" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contact Us
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="getting-started/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tips_conventions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TiPS Conventions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="reference/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Reference Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="demo_video_tips_v1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Demo Videos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is TiPS?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-tips-is-not" class="md-nav__link">
+    <span class="md-ellipsis">
+      What TiPS is not?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-does-tips-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      How does TiPS work?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How does TiPS work?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tips-security-aspect" class="md-nav__link">
+    <span class="md-ellipsis">
+      TiPS Security Aspect:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tips-metadata-tables" class="md-nav__link">
+    <span class="md-ellipsis">
+      TiPS Metadata Tables:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#licensing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Licensing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contact-us" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contact Us
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<div><h1 id="introduction-to-tips-snowflake-native-app">Introduction to TiPS (Snowflake Native App)</h1>
+<h3 id="what-is-tips">What is TiPS?</h3>
+<p>TiPS is a simple data transformation and data quality framework built for Snowflake.</p>
+<p>With TiPS, building data pipelines becomes as easy as writing your transformation business logic in a database view acting as a data source, defining a target table where this transformed data would land, and adding a metadata record in the TiPS metadata table. That's it. You don't need to write or execute any DML statements for the movement of this data. TiPS dynamically generates and executes all relevant DML statements during runtime.</p>
+<p>You can watch demonstration videos <a href="demo_video_tips_v1/">here</a>.</p>
+<p>Along with INSERT/APPEND/MERGE/DELETE/TRUNCATE, TiPS also offers pre-built command types such as:</p>
+<ol>
+<li>PUBLISH_SCD2 - supports pushing data to SCD2 (slow changing type 2) dimension. For changed records, a new record is inserted, and the existing record is updated with applicable effective start and end dates.</li>
+<li>COPY_INTO_FILE - supports extracting data from the Snowflake database to a file in a stage. The stage can be external, internal, or a named stage.</li>
+<li>COPY_INTO_TABLE - supports loading data from a staged file into the Snowflake database table. The stage can be external, internal, or a named stage.</li>
+</ol>
+<p>Details about all possible command types in TiPS are listed on the <a href="reference/#command-types">reference guide page</a>.</p>
+<p>The ideology behind TiPS was to create a framework that an experienced database professional, already adept with SQL, could easily use to deliver data pipelines with virtually zero learning curve.</p>
+<p>A data pipeline in TiPS comprises multiple steps that can be chained together, with each step performing its own operation to move data from source to target or checking data quality. Steps within a data pipeline can perform one of two things:</p>
+<ul>
+<li>A movement of data from a source to a target. In most cases, the sources are database views encapsulating transformation logic in the desired form, while the targets are database tables.</li>
+<li>A data quality check to ensure that data being moved from source to target conforms to the desired form before being consumed by the data consumer, thus providing consistent results.</li>
+</ul>
+<p>Here's an example data pipeline in TiPS:
+<img alt="Process Cmd Table Example" src="images/process_cmd.png"></p>
+<p>TiPS was built with security in mind. The database credentials used to execute a pipeline do not require read/write access to the underlying data. In this regard, TiPS differs from other data transformation tools. We believe that data pipelines should be idempotent. Thus, if pipeline execution credentials were ever leaked, the worst-case scenario would be that a pipeline could be re-executed (compute costs would increase, but data integrity would not be compromised).</p>
+<h3 id="what-tips-is-not">What TiPS is not?</h3>
+<p><strong>TiPS is not a scheduler/orchestrator tool:</strong>
+TiPS doesn't have any scheduling or orchestration capabilities built-in. Orchestrating or scheduling the execution of data pipelines on a regular interval can be done through other tools like Airflow, Control-M, or Unix Cron.</p>
+<p><strong>TiPS is not a Data Ingestion tool:</strong>
+TiPS is a transformation framework and is not intended to replace data ingestion tools like Fivetran or Matillion. With TiPS, the starting source of data for the data pipeline is usually data already landed into Snowflake tables from a source or from files stored in a Snowflake-accessible stage (external or internal, e.g., S3 on AWS).</p>
+<h3 id="how-does-tips-work">How does TiPS work?</h3>
+<p>TiPS is a simple-to-use metadata-driven transformation framework. All metadata is stored in database tables in Snowflake, which can easily be interrogated using normal SQL commands.</p>
+<p>All TiPS objects are first-class database objects.</p>
+<h4 id="tips-security-aspect">TiPS Security Aspect:</h4>
+<p>TiPS provides an extra security feature where the executing user of the stored procedure doesn't need to have direct read/write privileges on the underlying table/data. The user calling the stored procedure only needs privileges to execute the stored procedure.</p>
+<h3 id="tips-metadata-tables">TiPS Metadata Tables:</h3>
+<p><img alt="TiPS ERD" src="images/tips_erd.png"></p>
+<ul>
+<li><a href="reference/#process">PROCESS</a> - Holds information about Data Pipelines, e.g., Name and Description of Data Pipeline.</li>
+<li><a href="reference/#process_cmd">PROCESS_CMD</a> - This table holds information about individual steps within a data pipeline.</li>
+<li><a href="reference/#process_log">PROCESS_LOG</a> - This table is populated with data pipeline execution logs when data pipelines are run through TiPS.</li>
+<li><a href="reference/#process_dq_log">PROCESS_DQ_TEST</a> - This table comes with some preconfigured DQ tests. Users can configure new tests into this table.</li>
+<li><a href="reference/#process_cmd_tgt_dq_test">PROCESS_CMD_TGT_DQ_TEST</a> - This table is configured to link DQ Tests to the Target (table).</li>
+<li><a href="reference/#process_dq_log">PROCESS_DQ_LOG</a> - This table is populated with data quality test execution logs when data pipelines are run through TiPS. Data in this table is tied to the <code>PROCESS_LOG</code> table through the <code>process_log_id</code> column.</li>
+</ul>
+<h3 id="licensing">Licensing</h3>
+<p>TiPS (Native App) is licensed under GNU (GPL), and you are free to install it from the Snowflake Marketplace and use it as you wish.
+Any feedback and suggestions for improvements are always welcome. Kindly add your feedback/suggestions using <a href="https://github.com/orgs/ProjectiveGroupUK/discussions">GitHub Discussions</a>.</p>
+<h3 id="contact-us">Contact Us</h3>
+<p>If you feel the need to contact us, you can reach us through the channels below:</p>
+<ul>
+<li><a href="https://www.projectivegroup.com/">Projective Group Website</a></li>
+<li><a href="mailto://steve.jenkings@projectivegroup.com">Projective Group Sales Email</a></li>
+<li><a href="mailto://nitin.garg@projectivegroup.com">Projective Group Support Email</a></li>
+</ul></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2023 ProjectiveGroup UK
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": ".", "features": ["content.code.copy", "navigation.instant", "navigation.top"], "search": "assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="assets/javascripts/bundle.3220b9d7.min.js"></script>
+      
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+      
+        <script src="javascripts/tablesort.js"></script>
+      
+    
+  </body>
+</html>
