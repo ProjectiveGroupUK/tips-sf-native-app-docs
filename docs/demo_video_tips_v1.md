@@ -8,6 +8,6 @@ Here is a short demostration video of TiPS Native App version 1.0
 
 ## TiPS UI video
 
-Here is a short demostration video of TiPS UI that will be included in version 1.0.1 or TiPS Native App
+Here is a short demostration video of TiPS UI that is also included with TiPS Native App
 
 ![type:video](./videos/tips_ui_with_audio.mp4)
